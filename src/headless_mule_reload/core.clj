@@ -2,6 +2,11 @@
   (:require [clj-http.client :as client]
             [cheshire.core :as cheshire]))
 
+(def max-fetch-times 3)
+(def tsecond 1000)
+(def request-initial-backoff (* 10 tsecond))
+(def request-subsequent-backoff (* 10 (* 60 tsecond)))
+
 (defn make-req [guid password]
   (println (format "Reloading [%s]" guid))
   (client/get "https://realmofthemadgodhrd.appspot.com/char/list"
@@ -15,16 +20,7 @@
                          "Origin" "null"
                          "User-Agent" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Ubuntu Chromium/71.0.3578.80 Chrome/71.0.3578.80 Safari/537.36"}}))
 
-(defn foo
-  [x]
-  (make-req
-   "aaaaa@gmail.com"
-   "caaaaaaaaa"))
-
-(def max-fetch-times 3)
-(def tsecond 1000)
-(def request-initial-backoff (* 10 tsecond))
-(def request-subsequent-backoff (* 10 (* 60 tsecond)))
+#_(make-req "aaaaa@gmail.com" "caaaaaaaaa")
 
 (defn req-and-retry [err?-fn skip?-fn req-fn guid]
   (loop [output (req-fn)
