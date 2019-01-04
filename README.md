@@ -9,8 +9,8 @@ This means it can be run in a headless server. Yay!
 
 1. Install [Leiningen](https://leiningen.org/)
 1. Export `accounts.js` from your muledump
-1. place it into project's root directory
-1. `lein run`
+1. Place it into project's root directory
+1. Execute `lein run` from console
 
 ## License
 
