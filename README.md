@@ -5,6 +5,8 @@ Reload your mules without [muledump](https://github.com/jakcodex/muledump/) UI.
 Does exactly same requests as [muledump](https://github.com/jakcodex/muledump/), only without UI.
 This means it can be run in a headless server. Yay!
 
+N.B. Don't overuse it
+
 ## Usage
 
 1. Install [Leiningen](https://leiningen.org/)
