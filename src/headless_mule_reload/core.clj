@@ -73,3 +73,5 @@
    (read-mules filename)))
 
 #_(gogogo "accounts.js")
+
+(defn -main [] (gogogo "accounts.js"))
