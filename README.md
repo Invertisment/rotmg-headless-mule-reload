@@ -1,12 +1,13 @@
 # headless-mule-reload
 
-Reload your mules without muledump UI.
-Does exactly same requests as muledump, only without UI.
+Reload your mules without [muledump](https://github.com/jakcodex/muledump/) UI.
+
+Does exactly same requests as [muledump](https://github.com/jakcodex/muledump/), only without UI.
 This means it can be run in a headless server. Yay!
 
 ## Usage
 
-1. Install leiningen (https://leiningen.org/)
+1. Install [Leiningen](https://leiningen.org/)
 1. Export `accounts.js` from your muledump
 1. place it into project's root directory
 1. `lein run`
