@@ -6,4 +6,5 @@
   :dependencies [[org.clojure/clojure "1.8.0"]
                  [clj-http "3.9.1"]
                  [cheshire "5.8.1"]]
-  :main headless-mule-reload.core)
+  :main headless-mule-reload.core
+  :profiles {:uberjar {:aot :all}})

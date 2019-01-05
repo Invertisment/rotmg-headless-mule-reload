@@ -72,4 +72,9 @@
 
 #_(gogogo "accounts.js")
 
-(defn -main [] (gogogo "accounts.js"))
+(defn -main
+  ([filename]
+   (gogogo filename))
+  ([]
+   (-main "accounts.js")))
+
