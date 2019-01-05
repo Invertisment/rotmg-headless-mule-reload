@@ -53,10 +53,12 @@
 #_(err? {:body "<Error> is here"})
 
 (defn read-mules [filename]
-  (->> (slurp filename)
-       (re-find #"accounts ?= ?(\{[^\}]*\})")
-       second
-       cheshire/decode))
+  (let [mules (->> (slurp filename)
+                   (re-find #"accounts ?= ?(\{[^\}]*\})")
+                   second
+                   cheshire/decode)]
+    (println (format "Loaded %s mules" (count mules)))
+    mules))
 
 #_(read-mules "accounts.js")
 
