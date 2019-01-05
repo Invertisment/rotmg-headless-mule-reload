@@ -1,6 +1,7 @@
 (ns headless-mule-reload.core
   (:require [clj-http.client :as client]
-            [cheshire.core :as cheshire]))
+            [cheshire.core :as cheshire])
+  (:gen-class))
 
 (def max-fetch-times 3)
 (def tsecond 1000)
